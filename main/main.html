@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 💟</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffccff, #ff99ff);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .container h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            margin-top: -180px;
+        }
+
+        .container p {
+            font-size: 1.5em;
+            margin-bottom: 2em;
+            margin-top: -20px;
+        }
+
+        .container .balloons {
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloons img {
+            width: 100px;
+            margin: 0 20px;
+            animation: updown 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes updown {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 3;
+            }
+        }
+
+        .nav-buttons {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-top: 80px;
+        }
+
+
+        .nav-buttons button {
+            background-image: url('https://cdn-icons-png.flaticon.com/128/3736/3736114.png');
+            background-repeat: no-repeat;
+            background-position: 50px;
+            background-size: 30px;
+            border-color: rgb(7, 7, 7);
+            padding: 10px 45px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 90px;
+            font-size: solid 16px;
+            color: rgb(6, 6, 6);
+            transition: background 0.3s, transform 0.3s;
+            text-indent: -30px;
+            font-weight: bold;
+        }
+        .nav-buttons button:hover {
+            background-image: url('https://cdn-icons-png.flaticon.com/128/12243/12243775.png');
+            background-position: absoulte;
+            transform: scale(1.1);
+        }
+        .nav-buttons button:focus {
+            outline: none;
+        }
+        .between-text {
+            font-size: 1rem;
+            color: #333;
+            margin: 0 10px;
+            padding-top: 8px;
+            font-weight: bolder;
+            padding-left: -20px;
+            padding-right: -20px;
+            font-size: 18px;
+        }
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-text {
+            font-size: 60px;
+            font-weight: bolder;
+            background: linear-gradient(270deg, white, grey, black);
+            background-size: 1000% 1000%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 20s ease infinite;
+            text-align: center;
+            margin-top: 20%;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        @keyframes between-text {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .between-text {
+            background: linear-gradient(270deg, black, grey, white);
+            background-size: 1000% 1000%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 20s ease infinite;
+            /* text-align: center; */
+            /* margin-top: 20%; */
+            /* font-family: 'Comic Sans MS', cursive, sans-serif; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+        <img src="image-hb.png" alt="connect to the better network for best experience" width="300" height="300">
+        </h1>
+        <p class="gradient-text">"You always brighten up my day. You're truly a ray of sunshine in my life. Happy birthday"</p>
+        <div class="balloons">
+            <!-- <img src="https://cdn-icons-png.freepik.com/256/12730/12730827.png?ga=GA1.1.636239877.1721319116&semt=ais_hybrid" alt="Balloon"> -->
+    <div class="nav-buttons">
+        <span class="between-text">I</span>
+        <button class="prev">Love</button>
+        <span class="between-text">you in the</span>
+        <button class="past">Past</button>
+        <span class="between-text">tense and</span>
+        <button class="next">Wish</button>
+        <span class="between-text">you in the future tense</span>
+        
+    </div>
+    <script>
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        const pastButton = document.querySelector('.past');
+
+        function navigateToResizer() {
+            window.location.href = "https://theignoredchapter-byd6.github.io/The_Wish/wish/wish.html";
+        }
+        function navigateTovideo() {
+            window.location.href = "https://theignoredchapter-byd6.github.io/The_Video/video/index.html";
+        }
+        function navigateToPast() {
+            window.location.href = "https://theignoredchapter-byd6.github.io/The_Slides/new%20slides/resizer.html";
+        }
+
+        nextButton.addEventListener('click', navigateToResizer);
+        prevButton.addEventListener('click', navigateTovideo);
+        pastButton.addEventListener('click', navigateToPast);
+    </script>
+
+</body>
+</html>
